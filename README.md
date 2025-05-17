@@ -20,6 +20,6 @@
 
 
 
-Deployed Link - 
+Deployed Link - https://recepie-realm.vercel.app/
 
 Made with ❤️ by Deepakshi Sharma. 
