@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Realm - Discover Delicious Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Recipe Realm</h1>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search for recipes...">
+                    <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                </div>
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="filters-container">
+            <div class="filter-group">
+                <button class="filter-toggle" id="filterToggle">
+                    <i class="fas fa-filter"></i> Filters
+                </button>
+                <div class="filter-panel" id="filterPanel">
+                    <div class="filter-section">
+                        <label>Cuisine:</label>
+                        <select id="cuisineFilter">
+                            <option value="">Any</option>
+                            <option value="indian">Indian</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="italian">Italian</option>
+                            <option value="mexican">Mexican</option>
+                            <option value="american">American</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <label>Dish Type:</label>
+                        <select id="dishTypeFilter">
+                            <option value="">Any</option>
+                            <option value="main course">Main Course</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="breakfast">Breakfast</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <label>Time:</label>
+                        <select id="timeFilter">
+                            <option value="">Any</option>
+                            <option value="15">Under 15 min</option>
+                            <option value="30">Under 30 min</option>
+                            <option value="60">Under 1 hour</option>
+                        </select>
+                    </div>
+                    <div class="filter-actions">
+                        <button id="applyFiltersBtn" class="apply-filters-btn">
+                            <i class="fas fa-search"></i> Search with Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden">
+            No recipes found. Please try a different search.
+        </div>
+
+        <div id="recipeGrid" class="recipe-grid"></div>
+
+        <div id="recipeModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
