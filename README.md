@@ -15,8 +15,8 @@
 ## 🛠️ Tech Stack
 
 - **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla)**
+- **CSS3 (Vanilla)**
+- **JavaScript)**
 
 
 
